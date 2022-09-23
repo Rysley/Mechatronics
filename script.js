@@ -121,9 +121,10 @@ highlightsBtns.addEventListener("click", function (e) {
   e.preventDefault();
 
   const clicked = e.target.closest(".highlights__misc_container");
+  if (!clicked) return;
+
   const courseMarkup = coursesMarkups[clicked.id];
   const parentEl = highlightsText;
-  if (!clicked) return;
 
   if (!clicked.classList.contains(".highlights__misc_container")) {
     [...clicked.parentElement.children].forEach((btn) => {
@@ -145,8 +146,9 @@ projectContainer.addEventListener("click", function (e) {
   e.preventDefault();
   const clicked = e.target.closest(".courses__subject");
   if (!clicked) return;
-  const parentEl = clicked.querySelector(".project_markup");
+  const textArea = clicked.querySelector(".project_markup");
   const subtitle = clicked.querySelector(".project_subtitle");
+  const image = clicked.querySelector(".landscape");
   const projectMarkup = projectMarkups[clicked.id];
   if (!clicked.classList.contains(".courses__subject")) {
     [...clicked.parentElement.children].forEach((btn) => {
@@ -167,7 +169,7 @@ projectContainer.addEventListener("click", function (e) {
   }
 
   console.log(clicked.id);
-  console.log(parentEl);
+  console.log(textArea);
 
   console.log(clicked.querySelector(".landscape"));
 
@@ -178,9 +180,12 @@ projectContainer.addEventListener("click", function (e) {
   setTimeout(scroll, 400);
   subtitle.classList.add("hidden");
 
+  fadeInElement(textArea);
+  fadeInElement(image);
+  /* 
   parentEl.classList.toggle("fade-in-image");
-  parentEl.classList.toggle("fade-in-image2");
-  renderMarkup(parentEl, projectMarkup);
+  parentEl.classList.toggle("fade-in-image2"); */
+  renderMarkup(textArea, projectMarkup);
 });
 
 btnsOpenModal.forEach((node) => node.addEventListener("click", openModal));
@@ -193,3 +198,17 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+const fadeInElement = function (el) {
+  if (
+    !(
+      el.classList.contains("fade-in-image") ||
+      el.classList.contains("fade-in-image2")
+    )
+  ) {
+    el.classList.add("fade-in-image");
+  }
+
+  el.classList.toggle("fade-in-image");
+  el.classList.toggle("fade-in-image2");
+};

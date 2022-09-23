@@ -584,24 +584,23 @@ flex-flow: wrap;
 .courses {
   display: grid;
   grid-auto-flow: row;
-  grid-template-columns: repeat(2, 1fr) ;
+  grid-template-columns: repeat(3, 1fr) ;
  /*  grid-template-rows: repeat(4, minmax(30vh, 50vh)); */
- grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto-fill 1fr);
   grid-gap: 1.5rem;
   /* display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center; */
   background: linear-gradient(#dde3e1, #dde3bf);
- /*  padding-left: 72px;
-  padding-right: 72px; */
+  padding-left: 35px;
+  padding-right: 35px;
   padding-bottom: 32px;
 }
 
 .courses__subject {
   display: block;
-  height: 500px;
-  max-height: fit-content;
+  max-height:initial;
   border-radius: 9px;
   background-color: #fdfafe;
   /*   margin: 16px; */
@@ -611,7 +610,7 @@ flex-flow: wrap;
 
 .project_subtitle {
   height: auto;
-  padding-bottom: 12px;
+  padding-bottom: 9px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -620,26 +619,43 @@ flex-flow: wrap;
  /*  display: inline-flexbox; */
   grid-row: span 2;
   width: 100%;
-  height: fit-content;
-  padding-bottom: 24px;
-  transition: grid-row 0.4s ease-in;
-
+  /* height: fit-content; */
+  height: auto;
+  padding-bottom: px;
+  transition: 2s ease-in;
+  font-smooth: auto;
 }
 
 .courses__subject-active#about_us {
   grid-column: span 2;
+  height: auto;
 }
 
 .courses__subject-active#about_project {
-  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .courses__subject-active#erasmus_plus {
+  height:fit-content;
+  min-height: 20rem;
   grid-column: span 3;
 }
 
 .courses__subject-active#benefits {
-  grid-column: span 2;
+  font-size: 20%
+  grid-row: span 2;
+  height: auto;
+}
+
+.courses__subject-active#purpose {
+  grid-row: span 1;
+  height: auto;
+  transition: 2s;
+
+}
+.courses__subject-active#directed_to {
+  grid-row: span 1;
+  transition: 2s;
 }
 
 
@@ -687,6 +703,7 @@ flex-flow: wrap;
   height: auto;
   min-height: 200px;
   padding-bottom: 12px;
+  border-radius: 9px 9px;
 /*   white-space: wrap;
   overflow: hidden;
   text-overflow: ellipsis; */
@@ -696,19 +713,102 @@ flex-flow: wrap;
   height: fit-content;
 }
 
-.courses__subject_text:hover {
+/* .courses__subject_text:hover {
+  background-color: #fbfaea;
+  border-radius: 9px 9px;
+  transition: 0.1s 0.05s;
+  color: #e57775;
+} */
+
+.courses__subject:hover {
   background-color: #fbfaea;
   border-radius: 9px 9px;
   transition: 0.1s 0.05s;
   color: #e57775;
 }
 
+
 .courses__subject_text p {
   color: #828081;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 710px) {
 
+  .courses {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; 
+  }
+
+  .courses__img-active {
+    display: block;
+    height: auto;
+  }
+
+  .courses__subject {
+    width: 350px;
+    height: 100px;
+    flex-grow: 1.8;
+  }
+
+  .courses__subject-active {
+   height: auto;
+  }
+
+  .project_subtitle {
+    /* transform: scale(0); */
+    display: none;
+  }
+
+/*   .courses__subject_text:hover {
+    background-color: #fbfaea;
+    border-radius: 9px 9px;
+    height: 100px;
+    transition: 0.1s 0.05s;
+    color: #e57775;
+    padding-bottom: 0px;
+  } */
+/* 
+  .project_subtitle {
+    display: none;
+  } */
+
+  /* 
+  .courses__subject-active{
+    grid-row: auto;
+  }
+
+  .courses__subject-active#about_us {
+    grid-column: span 1;
+  }
+
+  .courses__subject-active#erasmus_plus{
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .courses__img-active {
+    display: block;
+    height: auto;
+  }
+
+
+  .courses__subject_text p {
+    display: none;
+  }
+
+  .courses__subject-active p {
+    display: flex;
+  }
+
+  .courses__subject {
+    max-height: 100px;
+    box-shadow: 1px 1px #b8bdbb;
+  }
+ */
+  
+/* 
   .courses {
     padding: 16px;
     grid-template-columns: 1fr 1fr;
@@ -720,18 +820,6 @@ flex-flow: wrap;
     width: 250px;
     box-shadow: 1px 1px #b8bdbb;
   }
-/* 
-  .courses__subject:active {
-    box-shadow: 0px 0px;
-    margin-top: 9px;
-    margin-bottom: 7px;
-    margin-left: 9px;
-    margin-right: 8px;
-  } */
-
-/*   .courses__subject:last-child:active {
-    margin-bottom: 15px;
-  } */
 
   .courses__subject_text {
     text-align: left;
@@ -744,35 +832,8 @@ flex-flow: wrap;
 
   .courses__subject_text p {
     display: none;
-  }
-}
-/* @media screen and (min-width: 930px)  */
-@media only screen and (max-width: 930px) and (min-width: 720px)
-  {
-  .courses {
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(auto, 30vh);
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .courses__subject {
-  /*   flex-grow: 1;
-    width: 30%;
-    min-width: 30%; */
-    padding-bottom: 32px;
-    height: auto;
-  }
-/* 
-  .courses__subject-active {
-    transition: width ease-in 400ms;
-    width: 60%;
-    max-width: 60%;
   } */
 }
-
-
 
 /* THESIS STYLES */
 
@@ -904,6 +965,7 @@ flex-flow: wrap;
 }
 
 .hidden {
+  display: none;
   visibility: hidden;
   opacity: 0;
 }
