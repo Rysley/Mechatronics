@@ -164,6 +164,11 @@ header {
   bottom: 40px;
 }
 
+.erasmus_header {
+  transform: scale(1.5);
+  padding-left: 1rem;
+}
+
 .header__icons img {
   height: 2.3rem;
 }
@@ -248,8 +253,10 @@ header {
   max-width: 1100px;
   border-radius: 0.6rem;
   justify-content: flex-start;
-  background-position: bottom right;
+  background-position: top center;
   background-image: url("../media/images/banner_arduino.jpg");
+  filter: saturate(70%) hue-rotate(1deg);
+  background-attachment: fixed;
 }
 
 .banner__photo {
@@ -261,14 +268,14 @@ header {
 .banner__photo_container {
   height: fit-content;
   padding: 0px;
-  transform: translateY(8rem);
-  border-radius: 0rem 100rem 5em 0rem;
+  transform: translateY(1rem);
+  border-radius: 0rem 60rem 4rem 0rem;
   width: 5rem auto;
   margin-bottom: 0;
   /*   background-color: #ffffff; */
   backdrop-filter: blur(2px);
   /*  filter: drop-shadow(1px 1px 3px rgb(255, 255, 255)); */
-  backdrop-filter: blur(2px) contrast(30%) brightness(150%);
+  backdrop-filter: blur(2.5px) contrast(25%) brightness(150%);
   /* backdrop-filter: blur(6px) brightness(250%) saturate(20%); */
 }
 
@@ -298,14 +305,14 @@ header {
 .banner__button {
   text-align: center;
   align-content: center;
-  width: 60%;
+  width: 70%;
   background-color: #e57775;
   color: #fdfafe;
   padding: 8px;
   margin-top: 15px;
   margin-bottom: 32px;
   margin-left: 24px;
-  box-shadow: 1px 1px #dde3e1;
+  /* box-shadow: 1px 1px #dde3e1; */
   letter-spacing: 1px;
   border-radius: 4px;
 }
@@ -313,7 +320,7 @@ header {
 .banner__button:hover {
   transition: background-color 0.1s ease-in-out 0.05s;
   background-color: #c2312b;
-  /*  width: 91%; */
+  width: 70%;
   transition: 1s;
   border-radius: 6px;
   transition: 0.6s;
@@ -329,6 +336,8 @@ header {
 
 @media screen and (max-width: 910px) {
   .banner {
+    background-position: top right;
+    background-attachment: fixed;
     flex-direction: column;
     margin-left: 3%;
     margin-right: 3%;
@@ -380,7 +389,7 @@ header {
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1250px) {
   .banner {
     max-width: 100%;
     /*  max-height: 300px; */
@@ -395,11 +404,20 @@ header {
     background-attachment: fixed;
   }
 
+  .banner__photo_container {
+    transform: translateY(-1rem);
+    border-radius: 0rem;
+    /*   background-color: #ffffff; */
+    backdrop-filter: blur(2px) contrast(30%) brightness(150%);
+    border-radius: 0rem 0rem 4rem 4rem;
+    /*  filter: drop-shadow(1px 1px 3px rgb(255, 255, 255)); */
+  }
+
   .banner__photo img {
     object-fit: cover;
     object-position: bottom center;
     max-height: 550px;
-    width: 100%;
+    width: 115%;
     display: flex;
     border-radius: 0.2rem;
   }
