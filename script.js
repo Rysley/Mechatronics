@@ -117,88 +117,6 @@ const renderMarkup = function (parentEl, markup) {
   parentEl.insertAdjacentHTML("afterbegin", markup);
 };
 
-highlightsBtns.addEventListener("click", function (e) {
-  e.preventDefault();
-
-  const clicked = e.target.closest(".highlights__misc_container");
-  if (!clicked) return;
-
-  const courseMarkup = coursesMarkups[clicked.id];
-  const parentEl = highlightsText;
-
-  if (!clicked.classList.contains(".highlights__misc_container")) {
-    [...clicked.parentElement.children].forEach((btn) => {
-      btn.classList.remove("highlight-active");
-    });
-
-    clicked.classList.add("highlight-active");
-
-    highlightsText.classList.toggle("fade-in-image");
-    highlightsText.classList.toggle("fade-in-image2");
-
-    renderMarkup(parentEl, courseMarkup);
-  }
-});
-
-///console.log(...projectContainer);
-
-projectContainer.addEventListener("click", function (e) {
-  e.preventDefault();
-  const clicked = e.target.closest(".courses__subject");
-  if (!clicked) return;
-  const textArea = clicked.querySelector(".project_markup");
-  const subtitle = clicked.querySelector(".project_subtitle");
-  const image = clicked.querySelector(".landscape");
-  const projectMarkup = projectMarkups[clicked.id];
-  if (!clicked.classList.contains(".courses__subject")) {
-    [...clicked.parentElement.children].forEach((btn) => {
-      btn.classList.remove("courses__subject-active");
-      btn.querySelector(".landscape").classList.remove("courses__img-active");
-      btn.querySelector(".project_subtitle").classList.remove("hidden");
-      btn.querySelector(".project_markup").innerHTML = "";
-      btn
-        .querySelector(".courses__subject_text")
-        .classList.remove("courses__text-active");
-    });
-
-    clicked.classList.add("courses__subject-active");
-    clicked.querySelector(".landscape").classList.add("courses__img-active");
-    clicked
-      .querySelector(".courses__subject_text")
-      .classList.add("courses__text-active");
-  }
-
-  console.log(clicked.id);
-  console.log(textArea);
-
-  console.log(clicked.querySelector(".landscape"));
-
-  const scroll = function () {
-    clicked.scrollIntoView(true);
-  };
-
-  setTimeout(scroll, 400);
-  subtitle.classList.add("hidden");
-
-  fadeInElement(textArea);
-  fadeInElement(image);
-  /* 
-  parentEl.classList.toggle("fade-in-image");
-  parentEl.classList.toggle("fade-in-image2"); */
-  renderMarkup(textArea, projectMarkup);
-});
-
-btnsOpenModal.forEach((node) => node.addEventListener("click", openModal));
-
-btnCloseModal.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
-    closeModal();
-  }
-});
-
 const fadeInElement = function (el) {
   if (
     !(
@@ -212,3 +130,72 @@ const fadeInElement = function (el) {
   el.classList.toggle("fade-in-image");
   el.classList.toggle("fade-in-image2");
 };
+
+highlightsBtns.addEventListener("click", function (e) {
+  e.preventDefault();
+  const clicked = e.target.closest(".highlights__misc_container");
+  if (!clicked) return;
+  const courseMarkup = coursesMarkups[clicked.id];
+  const parentEl = highlightsText;
+
+  if (!clicked.classList.contains(".highlights__misc_container")) {
+    [...clicked.parentElement.children].forEach((btn) => {
+      btn.classList.remove("highlight-active");
+      clicked.classList.add("highlight-active");
+    });
+  }
+  fadeInElement(parentEl);
+  renderMarkup(parentEl, courseMarkup);
+});
+
+projectContainer.addEventListener("click", function (e) {
+  e.preventDefault();
+  const clicked = e.target.closest(".courses__subject");
+  if (!clicked) return;
+  const textArea = clicked.querySelector(".project_markup");
+  const subtitle = clicked.querySelector(".project_subtitle");
+  const image = clicked.querySelector(".landscape");
+  const projectMarkup = projectMarkups[clicked.id];
+
+  if (!clicked.classList.contains(".courses__subject")) {
+    [...clicked.parentElement.children].forEach((projElement) => {
+      projElement.classList.remove("courses__subject-active");
+      projElement
+        .querySelector(".landscape")
+        .classList.remove("courses__img-active");
+      projElement.querySelector(".project_subtitle").classList.remove("hidden");
+      projElement.querySelector(".project_markup").innerHTML = "";
+      projElement
+        .querySelector(".courses__subject_text")
+        .classList.remove("courses__text-active");
+    });
+
+    clicked.classList.add("courses__subject-active");
+    clicked.querySelector(".landscape").classList.add("courses__img-active");
+    clicked
+      .querySelector(".courses__subject_text")
+      .classList.add("courses__text-active");
+  }
+
+  const scroll = function () {
+    clicked.scrollIntoView(true);
+  };
+
+  setTimeout(scroll, 500);
+  subtitle.classList.add("hidden");
+
+  fadeInElement(textArea);
+  fadeInElement(image);
+
+  renderMarkup(textArea, projectMarkup);
+});
+
+btnsOpenModal.forEach((node) => node.addEventListener("click", openModal));
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
