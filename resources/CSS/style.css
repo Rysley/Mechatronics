@@ -317,21 +317,17 @@ header {
   border-radius: 4px;
 }
 
-.banner__button:hover {
+.button:hover {
   transition: background-color 0.1s ease-in-out 0.05s;
   background-color: #c2312b;
-  width: 70%;
   transition: 1s;
   border-radius: 6px;
   transition: 0.6s;
 }
 
-.banner__button:active {
+.button:active {
   background-color: #e92e29;
   transition: background-color 0.1s, box-shadow 0.5s;
-  margin-top: 17px;
-  margin-left: 25px;
-  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 910px) {
@@ -440,31 +436,6 @@ header {
 
 /* HIGHLIGHTS STYLES */
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn2 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.fade-in-image {
-  animation: fadeIn 1.5s;
-}
-.fade-in-image2 {
-  animation: fadeIn2 1.5s;
-}
-
 .highlights {
   display: flex;
   /* background-attachment: fixed;
@@ -480,7 +451,7 @@ header {
 .highlights__main {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   border-right: 1px solid #dde3e1;
   padding-bottom: 32px;
   padding-top: 4rem;
@@ -496,7 +467,7 @@ header {
 }
 
 .highlights__text_element {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   padding: 10px 24px;
   margin-top: 1rem;
 }
@@ -511,7 +482,7 @@ header {
 .highlights__misc {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
 }
 
 .highlight-active {
@@ -520,7 +491,7 @@ header {
 }
 
 .highlights__misc_photo {
-  width: 35%;
+  width: 30%;
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 16px;
@@ -550,7 +521,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 65%;
+  width: 70%;
 }
 
 .highlights__misc_text p {
@@ -559,6 +530,11 @@ header {
 }
 
 .highlights__misc_text h3 {
+  padding: 4px;
+  padding-left: 16px;
+}
+
+.highlights__misc_text h4 {
   padding: 4px;
   padding-left: 16px;
 }
@@ -577,6 +553,23 @@ header {
 .highlights__misc_text span:active {
   color: #e57775;
 }
+
+.course__button {
+  text-align: center;
+  align-content: center;
+  align-self: center;
+  width: 40%;
+  background-color: #e57775;
+  color: #fdfafe;
+  padding: 8px;
+  margin-top: 4rem;
+  margin-bottom: 32px;
+  margin-left: 50%;
+  margin-right: 50%;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
 /* 
 @media screen and (max-width: 960px) {
   .highlights__misc_text h3 {
@@ -1081,4 +1074,29 @@ header {
   background-color: rgb(108, 161, 27);
   transition: 0.7s;
   transition-delay: 0.1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in-image {
+  animation: fadeIn 1.5s;
+}
+.fade-in-image2 {
+  animation: fadeIn2 1.5s;
 }
