@@ -6,6 +6,7 @@ const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
 const projectContainer = document.querySelector(".courses");
 const highlightsText = document.querySelector(".highlights__main");
+/* const highlightsTextMobile = document.querySelector(".highlights__main_mobile"); */
 const highlightsBtns = document.querySelector(".highlights__misc");
 const projectText = document.querySelector(".project_markup");
 
@@ -142,15 +143,19 @@ highlightsBtns.addEventListener("click", function (e) {
   if (!clicked) return;
   const courseMarkup = coursesMarkups[clicked.id];
   const parentEl = highlightsText;
+  const parentElMobile = clicked.querySelector(".highlights__main_mobile");
+  console.log(parentElMobile);
 
   if (!clicked.classList.contains(".highlights__misc_container")) {
     [...clicked.parentElement.children].forEach((btn) => {
       btn.classList.remove("highlight-active");
+      btn.classList.remove("highlights__main_mobile");
       clicked.classList.add("highlight-active");
     });
   }
   fadeInElement(parentEl);
   renderMarkup(parentEl, courseMarkup);
+  renderMarkup(parentElMobile, courseMarkup);
 });
 
 projectContainer.addEventListener("click", function (e) {
