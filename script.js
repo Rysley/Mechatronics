@@ -17,15 +17,16 @@ const coursesMarkups = {
   </p>
     <p class='highlights__text_element'>Thanks to its reliable features and simplicity of use, mechatronics has significantly relieved humans of many difficult tasks</p>
     
-    <p class='highlights__text_element'>Mechatronic is something that we are facing in everyday life,
-    thanks to it was created among other:</p>
-    <p class='highlights__text_element'> – robots, for example robot ,,da Vinci” – used in medicine</p>
+    <h5 class='highlights__text_element'>Mechatronic is something that we are facing in everyday life,
+    thanks to it was created among other:</h5>
+    <ul>
+    <li><p class='highlights__text_element'>robots, for example robot ,,da Vinci” – used in medicine</p></li>
     
-    <p class='highlights__text_element'>– automatically opening doors</p>
+    <li><p class='highlights__text_element'>automatically opening doors</p></li>
     
-   <p class='highlights__text_element'>– automatic barrier (at the entrance to the parking, at rail crossings)</p>
+    <li><p class='highlights__text_element'>automatic barrier (at the entrance to the parking, at rail crossings)</p></li>
     
-   <p class='highlights__text_element'> – traffic lights</p>
+    <li><p class='highlights__text_element'>traffic lights</p></li>
    `,
   elraCAN: `<h2 class='highlights__text_element'>ELRASOFT – CAN</h2>
   <p class='highlights__text_element'>CAN bus analyzer (Elrasoft)</p>
@@ -33,25 +34,25 @@ const coursesMarkups = {
   <p class='highlights__text_element'>This training has to show how look like transering information in CAN, how systems respond to and answer questions about various physical quantities and how they and how they answer them.</p>
   
   <p class='highlights__text_element'>Our task is to present an environment for creating scripts in Visual Pascal language, the knowledge of which helps in reading data transmitted on CAN bus.</p>
-  <a class='course__button button' target="_blank" rel="noopener noreferrer" href='http://quality-education.eu/courses/'><span>Sign Up</span></a>`,
+  <a class="course__button button" target="_blank" rel="noopener noreferrer" href="http://quality-education.eu/courses/"><span>Sign Up</span></a>`,
   elraProg: `<h2 class='highlights__text_element'>ELRASOFT – PROGRAMMER</h2>
 
   <p class='highlights__text_element'>Device and memory programmer – Elrasoft</p>
 
 <p class='highlights__text_element'>Currently, all mechatronic modules are built on processors, which can collect information in real-time and respond to external commands. During this classes will be discussed about different ways of reading the collected information using the Elrasoft programmer. This programmer has a built-in environment for writing scripts in Visual Pascal that support the work. Our task (during these classes) will be to combine the skiils to read data with learning programming.</p>
 <a class='course__button button' target="_blank" rel="noopener noreferrer" href='http://quality-education.eu/courses/'><span>Sign Up</span></a>`,
-  arduino_1: `<h2 class='highlights__text_element'>ARDUINO I</h2>
-  <p class='highlights__text_element'>1) Arduino – measuring and digitizing various physical objects.</p>
+  arduino_1: `<h2 class='highlights__text_element'>ARDUINO COURSE I</h2>
+  <p class='highlights__text_element'>Arduino – measuring and digitizing various physical objects.</p>
 
   <p class='highlights__text_element'>In this course, using the Arduino module and a specially prepared kit for measuring physical values (voltage, current, vibration, temperature, humidity, time, motion sensor, distance, tilt, magnetic switch, magnetic field sensors, infrared receiver) the student learns how to convert these physical quantities into a language understood by the components and integrated circuits.</p>
   <a class='course__button button' target="_blank" rel="noopener noreferrer" href='http://quality-education.eu/courses/'><span>Sign Up</span></a>`,
-  arduino_2: `<h2 class='highlights__text_element'>ARDUINO II</h2>
-   <p class='highlights__text_element'>2) Arduino – read and write numerical data from integrated circuits</p>
+  arduino_2: `<h2 class='highlights__text_element'>ARDUINO COURSE II</h2>
+   <p class='highlights__text_element'>Arduino – read and write numerical data from integrated circuits</p>
 
   <p class='highlights__text_element'>In this course, the student will expand their knowledge about the transfer of information to integrated circuits, whose task is to collect and store results, using i2c, spi and microwire buses.</p>
   <a class='course__button button' target="_blank" rel="noopener noreferrer" href='http://quality-education.eu/courses/'><span>Sign Up</span></a>`,
-  arduino_3: `<h2 class='highlights__text_element'>ARDUINO III</h2>
-  <p class='highlights__text_element'>3) Arduino – CAN network</p>
+  arduino_3: `<h2 class='highlights__text_element'>ARDUINO COURSE III</h2>
+  <p class='highlights__text_element'>Arduino – CAN network</p>
 
   <p class='highlights__text_element'>This course is designed for those who want to learn the secrets related to the transmission of information using CAN bus. CAN bus was created to exchange information between modules in cars, streetcars, elevators. The class will describe and explain how to construct appropriate questions asking about basic physical quantities (speed, acceleration, temperature, pressure)</p>
   <a class='course__button button' target="_blank" rel="noopener noreferrer" href='http://quality-education.eu/courses/'><span>Sign Up</span></a>`,
@@ -70,7 +71,7 @@ const projectMarkups = {
   The platform will be developed during the next stages of the project (user needs analysis, implementation of demo version, tests, feedback) from users, usability and substantive research) so that our final result is the culmination of the work of experts, users and other people taking participation in the venture.</p>`,
   directed_to: `<p>Prepared online vocational courses are primarily addressed to:
 
-  vocational school students (who are studying in mechatronics and want to apply for a place inmechatronics studies),
+  vocational school students (who are studying in mechatronics and want to apply for a place in mechatronics studies),
   for students who want to make up for their educational shortcomings,
   for people who want to improve their competences in work related to mechatronics,
   for people interested in improving their qualifications getting a job in a profession where mechatronics knowledge is used</p>`,
@@ -80,8 +81,7 @@ const projectMarkups = {
   benefits: `<p>The project assumes, among others, conducting a programming course on the basis of which platform users will master the issues of operating data reading equipment, e.g. counters that will allow them to move on to the next stages of the course, including CAN support, and then to write programs that will combine and handle the data they collect andmessages.
 
   Trainings and courses will be divided into short theoretical lessons during which issues to be learned in the form of films, descriptions and presentations will be presented. Undergoing training for users with the knowledge necessary to pass the course. The courses will be divided into lessons during which students will take courses and pass them in stages. The courses are focused on acquiring practical knowledge. During the course, everyone will have to create a prototype root or other device.</p>`,
-  about_us: `<p>The Center for Education and Civic Entrepreneurship Foundation is a non-governmental organization whose priority is to support cooperation between various types of organizations and institutions in the field of international activities, educational classes, conferences and trainings. Trainings organized by the Foundations primarily support professional and personal development. All activities carried out by the Foundation are based on informal learning methods. The goals of the Foundation’s are similar with the strategic goals set by the Erasmus Plus program, i.e. increasing attractiveness, improving the quality of education and training, and increasing the number of professional and training trips. For several years, the Foundation’s activities have also focused on developing cooperation between institutions involved in education
-
+  about_us: `<p>
   The Center for Education and Civic Entrepreneurship Foundation is a non-governmental organization whose priority is to support cooperation between various types of organizations and institutions in the field of international activities, educational classes, conferences and trainings. Trainings organized by the Foundations primarily support professional and personal development. All activities carried out by the Foundation are based on informal learning methods. The goals of the Foundation’s are similar with the strategic goals set by the Erasmus Plus program, i.e. increasing attractiveness, improving the quality of education and training, and increasing the number of professional and training trips. For several years, the Foundation’s activities have also focused on developing cooperation between institutions involved in education.
   
   The Foundation is a partner of a network of local companies and is actively involved in EU projects that support educational activities related to raising social and professional competences.
@@ -99,11 +99,12 @@ const projectMarkups = {
   
   In the project implemebted under the Erasmus + Programme can take part students, graduates as well as teachers of practical vocational training, management staff of educational institutions, trainers, coaches and employees on the European labour market.
   
-  The project will help to implement innovative educational solutions, supports solutions that increase transparency and recognition of professional qualifications.
+  The project will help to implement innovative educational solutions, supports solutions that increase transparency and recognition of professional qualifications.</p>
   
-  https://erasmusplus.org.pl/sektory/ksztalcenie-i-szkolenia-zawodowe/
+  <a target="_blank" rel="noopener noreferrer" href="https://erasmusplus.org.pl/sektory?sector=2" style="padding-left: 1rem">erasmusplus.org.pl</a>
   
-  https://www.facebook.com/ZawodowyErasmus</p>`,
+  <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ZawodowyErasmus" style="padding-left: 1rem">facebook.com/ZawodowyErasmus</a>
+  `,
 };
 
 const openModal = function (e) {
@@ -144,22 +145,31 @@ highlightsBtns.addEventListener("click", function (e) {
   const courseMarkup = coursesMarkups[clicked.id];
   const parentEl = highlightsText;
   const parentElMobile = clicked.querySelector(".highlights__main_mobile");
+  const readMeContainer = clicked.querySelector(".read_me_cont");
   console.log(parentElMobile);
 
   if (!clicked.classList.contains(".highlights__misc_container")) {
     [...clicked.parentElement.children].forEach((btn) => {
       btn.classList.remove("highlight-active");
       btn.classList.remove("highlights__main_mobile");
+      btn.querySelector(".highlights__main_mobile").innerHTML = "";
       clicked.classList.add("highlight-active");
+      if (btn.querySelector(".read_me_cont").classList.contains("hidden_2")) {
+        console.log(btn.querySelector(".read_me_cont"));
+        btn.querySelector(".read_me_cont").classList.remove("hidden_2");
+      }
+      /*     */
     });
   }
+
+  readMeContainer.classList.add("hidden_2");
   fadeInElement(parentEl);
   renderMarkup(parentEl, courseMarkup);
   renderMarkup(parentElMobile, courseMarkup);
 });
 
 projectContainer.addEventListener("click", function (e) {
-  e.preventDefault();
+  /*   e.preventDefault(); */
   const clicked = e.target.closest(".courses__subject");
   if (!clicked) return;
   const textArea = clicked.querySelector(".project_markup");

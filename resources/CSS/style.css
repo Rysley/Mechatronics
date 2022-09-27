@@ -385,7 +385,7 @@ header {
   }
 }
 
-@media screen and (min-width: 1250px) {
+@media screen and (min-width: 1367px) {
   .banner {
     max-width: 100%;
     /*  max-height: 300px; */
@@ -458,6 +458,17 @@ header {
   padding-right: 4rem;
   padding-top: 4rem;
   /*  animation: fadeIn 2s; */
+}
+
+.highlights__main ul {
+  list-style: circle;
+  margin-left: 2.5rem;
+}
+
+li .highlights__text_element {
+  font-size: 0.9rem;
+  padding: 0rem;
+  margin: 0.5rem;
 }
 
 .highlights__main_mobile {
@@ -544,7 +555,7 @@ header {
   padding: 4px;
   padding-left: 16px;
 }
-
+/* 
 .highlights__misc_text span {
   color: #377acf;
   padding: 4px;
@@ -558,6 +569,25 @@ header {
 
 .highlights__misc_text span:active {
   color: #e57775;
+} */
+
+.read_me span {
+  color: #377acf;
+  padding: 4px;
+  padding-left: 16px;
+  padding-bottom: 12px;
+}
+
+.read_me span:hover {
+  color: #0cb1ff;
+}
+
+.read_me span:active {
+  color: #e57775;
+}
+
+.read_me_cont {
+  height: 30px;
 }
 
 .course__button {
@@ -606,7 +636,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-/*     border-right: 1px solid #dde3e1; */
+    /*     border-right: 1px solid #dde3e1; */
     padding-bottom: 32px;
     padding-left: 4rem;
     padding-right: 4rem;
@@ -901,6 +931,14 @@ header {
   padding-bottom: 9px;
 }
 
+.partners_subtitle ul {
+  list-style: circle;
+}
+
+#partner_edunet p {
+  padding: 0.5rem;
+}
+
 @media screen and (min-width: 711px) and (max-width: 930px) {
 }
 /* THESIS STYLES */
@@ -1036,6 +1074,12 @@ header {
   display: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.hidden_2 {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s ease-out;
 }
 
 .btn--close-modal {
