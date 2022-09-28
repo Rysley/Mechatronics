@@ -250,7 +250,15 @@ const arrInputID = [
   "input_message",
 ];
 
-const validateType = function (inputID) {
+const objInputID = {
+  input_fname: "",
+  input_lname: "",
+  input_email: "",
+  input_tel: "",
+  input_message: "",
+};
+
+/* const validateType = function (inputID) {
   const inputValue = document.getElementById(inputID).value;
 
   if (typeof inputValue !== "string") {
@@ -259,36 +267,27 @@ const validateType = function (inputID) {
   }
 
   if (typeof inputValue === "string") return true;
-};
+}; */
 
 const validateContent = function (inputID) {
-  const inputValue = document.getElementById(inputID).value;
-
-  if (!inputValue) {
-    /*  console.log(`Input field ${inputID} is empty!`); */
-    return false;
-  }
-  if (inputValue) return true;
+  return Boolean(document.getElementById(inputID).value);
+  // return inputValue.length > 0
 };
 
 const finalValidation = function (validationsArr) {
-  const allValid = validationsArr.every((val) => val);
   /*  console.log(`all input fields correct: ${allValid}`); */
-  return allValid;
+  return validationsArr.every((val) => val);
 };
 
 const submitValidation = function (e) {
-  e.preventDefault();
-
-  const allValidations = arrInputID.map((input) => {
-    if (validateType(input) && validateContent(input)) return true;
-    if (!validateType(input) || !validateContent(input)) return false;
-  });
+  const allValidations = arrInputID.map((input) => validateContent(input));
 
   if (finalValidation(allValidations)) {
     console.log("execute the submit function HERE");
   } else {
     console.log("error message function HERE");
+    e.preventDefault();
+    alert("Please fill all of the input fields with adequate input");
   }
 };
 
