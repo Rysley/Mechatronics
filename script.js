@@ -132,12 +132,13 @@ const projectMarkups = {
 
 const openModal = function (e) {
   e.preventDefault();
-
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
 
-const closeModal = function () {
+const closeModal = function (e) {
+  e.preventDefault();
+  clearModal();
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
 };
@@ -242,14 +243,6 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-const arrInputID = [
-  "input_fname",
-  "input_lname",
-  "input_email",
-  "input_tel",
-  "input_message",
-];
-
 const objInputID = {
   input_fname: "",
   input_lname: "",
@@ -257,6 +250,44 @@ const objInputID = {
   input_tel: "",
   input_message: "",
 };
+
+const clearModal = () =>
+  Object.entries(objInputID).forEach(
+    (el) => (document.getElementById(el[0]).innerHTML = "")
+  );
+
+const validateContent = (inputID) =>
+  Boolean(document.getElementById(inputID).value);
+
+const finalValidation = (validationsArr) => validationsArr.every((val) => val);
+
+const resetInputField = function (id) {
+  document.getElementById(id).style.borderColor = "#ddd";
+  document.getElementById(id).style.backgroundColor = "E8F0FE";
+};
+
+const submitValidation = function (e) {
+  const invalidInputs = [];
+
+  Object.entries(objInputID).forEach((id) => {
+    resetInputField(id[0]);
+    objInputID[id[0]] = validateContent(id[0]);
+
+    if (!validateContent(id[0])) invalidInputs.push([id[0]]);
+  });
+
+  if (Object.values(objInputID).every((value) => value)) {
+    console.log("execute the submit AND some user success info HERE");
+    closeModal();
+  } else {
+    e.preventDefault();
+    invalidInputs.forEach((err) => {
+      document.getElementById(err).style.borderColor = "red";
+    });
+  }
+};
+
+btnSubmit.addEventListener("click", submitValidation);
 
 /* const validateType = function (inputID) {
   const inputValue = document.getElementById(inputID).value;
@@ -268,27 +299,3 @@ const objInputID = {
 
   if (typeof inputValue === "string") return true;
 }; */
-
-const validateContent = function (inputID) {
-  return Boolean(document.getElementById(inputID).value);
-  // return inputValue.length > 0
-};
-
-const finalValidation = function (validationsArr) {
-  /*  console.log(`all input fields correct: ${allValid}`); */
-  return validationsArr.every((val) => val);
-};
-
-const submitValidation = function (e) {
-  const allValidations = arrInputID.map((input) => validateContent(input));
-
-  if (finalValidation(allValidations)) {
-    console.log("execute the submit function HERE");
-  } else {
-    console.log("error message function HERE");
-    e.preventDefault();
-    alert("Please fill all of the input fields with adequate input");
-  }
-};
-
-btnSubmit.addEventListener("click", submitValidation);
