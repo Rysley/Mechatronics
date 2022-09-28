@@ -19,27 +19,29 @@
     <!-- HEADER -->
 
     <header id='header'>
-      <div class='header__icons landscape'>
-        <!--a class='landscape' href ='#header'-->
-        <a target="_blank" rel="noopener noreferrer" href="https://erasmus-plus.ec.europa.eu/projects/search/search?page=1&sort=&domain=eplus2021&view=&keyword=mechatronics&searchType=projects">
-        <img class="erasmus_header" src="./resources/media/images/erasmus.png">
-        </a>
-        <!-- <a href='#'><span>MECHA</span><img class='landscape'  src="./resources/media/images/mecha_arm_32.png"/><span>TRONICS</span></a> -->
-      </div>
-      <div class='header__nav landscape'>
-        <nav>
-          <ul class='header__list'>
-            <li class='landscape'><a href='#project'>PROJECT</a></li>
-            <li class='landscape'><a href='#courses'>COURSES</a></li>
-            <li class='landscape'><a href='#partners'>PARTNERS</a></li>
-            <li class='landscape btn--show-modal'><a href='#contact'>CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-      <a class='mobile__none' href ='#courses'><li class='mobile'><img title="COURSES" src="./resources/media/images/mecha_arm_32.ico"/></li></a>
-      <a class='mobile__none' href='#project'><li class='mobile'><img title="PROJECT" src="./resources/media/images/ic-project.ico"/></li></a>
-      <a class='mobile__none' href='#partners'><li class='mobile'><img title="PARTNERS" src="./resources/media/images/ic-partners.ico"/></li></a>
-      <a class='mobile__none btn--show-modal' href='#contact'><li class='mobile'><img title="CONTACT US" src="./resources/media/images/ic-contact.ico"/></li></a>
+      
+        <div class='header__icons landscape'>
+          <!--a class='landscape' href ='#header'-->
+          <a target="_blank" rel="noopener noreferrer" href="https://erasmus-plus.ec.europa.eu/projects/search/search?page=1&sort=&domain=eplus2021&view=&keyword=mechatronics&searchType=projects">
+          <img class="erasmus_header" src="./resources/media/images/erasmus.png">
+          </a>
+          <!-- <a href='#'><span>MECHA</span><img class='landscape'  src="./resources/media/images/mecha_arm_32.png"/><span>TRONICS</span></a> -->
+        </div>
+        <div class='header__nav landscape'>
+          <nav>
+            <ul class='header__list'>
+              <li class='landscape'><a href='#project'>PROJECT</a></li>
+              <li class='landscape'><a href='#courses'>COURSES</a></li>
+              <li class='landscape'><a href='#partners'>PARTNERS</a></li>
+              <li class='landscape btn--show-modal'><a href='#contact'>CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+          <a class='mobile__none' href ='#courses'><li class='mobile'><img title="COURSES" src="./resources/media/images/mecha_arm_32.ico"/></li></a>
+          <a class='mobile__none' href='#project'><li class='mobile'><img title="PROJECT" src="./resources/media/images/ic-project.ico"/></li></a>
+          <a class='mobile__none' href='#partners'><li class='mobile'><img title="PARTNERS" src="./resources/media/images/ic-partners.ico"/></li></a>
+          <a class='mobile__none btn--show-modal' href='#contact'><li class='mobile'><img title="CONTACT US" src="./resources/media/images/ic-contact.ico"/></li></a>
+     
     </header>
 
     <!-- <div cl="wtf">
@@ -420,26 +422,27 @@
 
     <!-- CONTACT POPUP WINDOW -->
 
-    <div class="modal hidden" id="contact">
+    <div class="modal " id="contact">
       <button class="btn--close-modal">&times;</button>
       <h3 class="modal__header">
         Questions? Ask EduNet about anything
       </h3>
       <form class="modal__form">
         <label>First Name</label>
-        <input type="text" />
+        <input type="text" class="input" id="input_fname"/>
         <label>Last Name</label>
-        <input type="text" />
+        <input type="text" class="input" id="input_lname"/>
         <label>Email Address</label>
-        <input type="email" />
+        <input type="email" class="input"  id="input_email"/>
         <label>Phone Number</label>
-        <input type="tel"/>
+        <input type="tel" class="input"  id="input_tel"/>
         <label>Message</label>
-        <textarea name="comment" form="usrform" rows="6" cols="50" placeholder="New message here.."></textarea>
-        <button class="btn">Submit &rarr;</button>
+        <textarea name="comment" class="input"  id="input_message" form="usrform" rows="6" cols="50" placeholder="New message here.."></textarea>
+        <button class="btn btn_submit">Submit &rarr;</button>
       </form>
     </div>
-    <div class="overlay hidden"></div>
+    <div class="overlay "></div>
   </body>
 
 </html>
+

@@ -1,14 +1,37 @@
 "use strict";
 
+const navBar = document.querySelector(".nav_bar");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
 const projectContainer = document.querySelector(".courses");
 const highlightsText = document.querySelector(".highlights__main");
-/* const highlightsTextMobile = document.querySelector(".highlights__main_mobile"); */
 const highlightsBtns = document.querySelector(".highlights__misc");
 const projectText = document.querySelector(".project_markup");
+const btnSubmit = document.querySelector(".btn_submit");
+
+// STICKY NAVIGATION BAR //
+/* 
+console.log(navBar);
+const navRect = navBar.getBoundingClientRect().height;
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    navBar.classList.add("sticky");
+  } else {
+    navBar.classList.remove("sticky");
+  }
+};
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0, // if visibility is 0% the callback will trigger
+  rootMargin: `-${navRect}px`,
+});
+headerObserver.observe(navBar); */
+
+//////////// MARKUPS ////
 
 const coursesMarkups = {
   mecha: `
@@ -158,7 +181,6 @@ highlightsBtns.addEventListener("click", function (e) {
         console.log(btn.querySelector(".read_me_cont"));
         btn.querySelector(".read_me_cont").classList.remove("hidden_2");
       }
-      /*     */
     });
   }
 
@@ -169,7 +191,7 @@ highlightsBtns.addEventListener("click", function (e) {
 });
 
 projectContainer.addEventListener("click", function (e) {
-  /*   e.preventDefault(); */
+  /*  e.preventDefault(); */
   const clicked = e.target.closest(".courses__subject");
   if (!clicked) return;
   const textArea = clicked.querySelector(".project_markup");
@@ -219,3 +241,55 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 });
+
+const arrInputID = [
+  "input_fname",
+  "input_lname",
+  "input_email",
+  "input_tel",
+  "input_message",
+];
+
+const validateType = function (inputID) {
+  const inputValue = document.getElementById(inputID).value;
+
+  if (typeof inputValue !== "string") {
+    console.log(`Input field $${inputID} is not a string`);
+    return false;
+  }
+
+  if (typeof inputValue === "string") return true;
+};
+
+const validateContent = function (inputID) {
+  const inputValue = document.getElementById(inputID).value;
+
+  if (!inputValue) {
+    /*  console.log(`Input field ${inputID} is empty!`); */
+    return false;
+  }
+  if (inputValue) return true;
+};
+
+const finalValidation = function (validationsArr) {
+  const allValid = validationsArr.every((val) => val);
+  /*  console.log(`all input fields correct: ${allValid}`); */
+  return allValid;
+};
+
+const submitValidation = function (e) {
+  e.preventDefault();
+
+  const allValidations = arrInputID.map((input) => {
+    if (validateType(input) && validateContent(input)) return true;
+    if (!validateType(input) || !validateContent(input)) return false;
+  });
+
+  if (finalValidation(allValidations)) {
+    console.log("execute the submit function HERE");
+  } else {
+    console.log("error message function HERE");
+  }
+};
+
+btnSubmit.addEventListener("click", submitValidation);

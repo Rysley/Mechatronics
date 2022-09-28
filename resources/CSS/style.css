@@ -209,6 +209,17 @@ header {
   color: #e92e29;
 }
 
+/* .nav_bar.sticky {
+  position: fixed;
+}
+
+.nav_bar {
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+} */
+
 @media screen and (max-width: 710px) {
   header {
     display: flex;
@@ -849,6 +860,7 @@ li .highlights__text_element {
   }
 
   .courses__subject {
+    min-width: auto;
     width: 350px;
     height: 100px;
     flex-grow: 1.8;
