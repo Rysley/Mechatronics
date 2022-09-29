@@ -245,9 +245,8 @@ document.addEventListener("keydown", function (e) {
 ////////////////////////////
 // MODAL FORM VALIDATION //
 
-const getChildrenOfElement = function (element) {
-  return document.querySelectorAll(`.${element} > .input`);
-};
+const getChildrenOfElement = (element) =>
+  document.querySelectorAll(`.${element} > .input`);
 const objInputID = {};
 const childrenIDs = getChildrenOfElement("modal__form").forEach(
   (el) => (objInputID[el.id] = "")

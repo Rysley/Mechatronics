@@ -434,22 +434,22 @@
       <h3 class="modal__header">
         Questions? Ask EduNet about anything
       </h3>
-      <form class="modal__form">
+      <form class="modal__form" action="https://formsubmit.co/4f2d0a02d217782bcf347642b60bfd94" method="POST">
         <label>First Name</label>
-        <input type="text" class="input" id="input_fname"/>
+        <input type="text" class="input" name="first_name" id="input_fname"/>
         <label>Last Name</label>
-        <input type="text" class="input" id="input_lname"/>
+        <input type="text" class="input" name="last_name" id="input_lname"/>
         <label>Email Address</label>
-        <input type="email" class="input"  id="input_email"/>
+        <input type="email" class="input" name="email" id="input_email"/>
         <label>Phone Number</label>
-        <input type="number" class="input"  id="input_tel"/>
+        <input type="number" class="input" name="tel_number" id="input_tel"/>
         <label>Message</label>
-        <textarea name="comment" class="input"  id="input_message" form="usrform" rows="6" cols="50" placeholder="New message here.."></textarea>
-        <button class="btn btn_submit">Submit &rarr;</button>
+        <textarea type="text" class="input" name="message" id="input_message" rows="6" cols="50" placeholder="New message here.." required></textarea>
+        <button type="submit" class="btn btn_submit">Submit &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>
   </body>
-
+<!-- form="usrform"  -->
 </html>
 
