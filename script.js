@@ -236,20 +236,22 @@ projectContainer.addEventListener("click", function (e) {
 btnsOpenModal.forEach((node) => node.addEventListener("click", openModal));
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
-
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
 });
 
-const objInputID = {
-  input_fname: "",
-  input_lname: "",
-  input_email: "",
-  input_tel: "",
-  input_message: "",
+////////////////////////////
+// MODAL FORM VALIDATION //
+
+const getChildrenOfElement = function (element) {
+  return document.querySelectorAll(`.${element} > .input`);
 };
+const objInputID = {};
+const childrenIDs = getChildrenOfElement("modal__form").forEach(
+  (el) => (objInputID[el.id] = "")
+);
 
 const clearModal = () =>
   Object.entries(objInputID).forEach(
