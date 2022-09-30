@@ -11,26 +11,6 @@ const highlightsBtns = document.querySelector(".highlights__misc");
 const projectText = document.querySelector(".project_markup");
 const btnSubmit = document.querySelector(".btn_submit");
 
-// STICKY NAVIGATION BAR //
-/* 
-console.log(navBar);
-const navRect = navBar.getBoundingClientRect().height;
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) {
-    navBar.classList.add("sticky");
-  } else {
-    navBar.classList.remove("sticky");
-  }
-};
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0, // if visibility is 0% the callback will trigger
-  rootMargin: `-${navRect}px`,
-});
-headerObserver.observe(navBar); */
-
 //////////// MARKUPS ////
 
 const coursesMarkups = {

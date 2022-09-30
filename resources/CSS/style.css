@@ -1063,43 +1063,57 @@ li .highlights__text_element {
 
 .modal {
   position: fixed;
-  top: 50%;
   left: 50%;
-  transform: scale(0.7);
+  top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 60rem;
+  /*   transform: translate(-50%, -50%); */
+  min-height: 30em;
+  max-width: 40em;
   background-color: #f3f3f3;
-  padding: 5rem 6rem;
-  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  padding: 5rem 4rem;
+  box-shadow: 0 4rem 6rem rgba(46, 33, 33, 0.3);
   z-index: 1000;
   transition: all 0.5s;
 }
 
 .modal__header {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   line-height: 1.3;
 }
 
 .modal__form {
-  margin: 0 3rem;
+  margin: 0 0rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .modal {
+    width: 80%;
+    max-width: none;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .modal__form {
+    margin-left: 10rem;
+    margin-right: 0;
+  }
 }
 
 .modal__form input {
   font-size: 1rem;
   padding: 0.4rem;
+  max-width: 290px;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
 }
 
-
-
-
 .modal__form textarea {
+  max-width: 290px;
   font-size: 1.2rem;
   padding: 0.8rem 1.2rem;
   border: 1px solid #ddd;
@@ -1124,7 +1138,7 @@ li .highlights__text_element {
 
 .btn--close-modal {
   font-family: inherit;
-  color: inherit;
+  color: rgb(197, 162, 162);
   position: absolute;
   top: 2rem;
   right: 3.5rem;
@@ -1135,7 +1149,7 @@ li .highlights__text_element {
 }
 
 .btn--close-modal:hover {
-  color: rgb(197, 162, 162);
+  color: rgb(199, 136, 136);
   transform: translate(1px, 1px);
   transition: 0.4s ease-out;
 }
@@ -1170,6 +1184,10 @@ li .highlights__text_element {
   background-color: rgb(108, 161, 27);
   transition: 0.7s;
   transition-delay: 0.1s;
+}
+
+.btn_submit {
+  max-width: 200px;
 }
 
 @keyframes fadeIn {
