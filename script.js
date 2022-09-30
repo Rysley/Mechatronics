@@ -1,6 +1,5 @@
 "use strict";
 
-const navBar = document.querySelector(".nav_bar");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".btn--close-modal");
@@ -150,7 +149,6 @@ highlightsBtns.addEventListener("click", function (e) {
   const parentEl = highlightsText;
   const parentElMobile = clicked.querySelector(".highlights__main_mobile");
   const readMeContainer = clicked.querySelector(".read_me_cont");
-  console.log(parentElMobile);
 
   if (!clicked.classList.contains(".highlights__misc_container")) {
     [...clicked.parentElement.children].forEach((btn) => {
@@ -159,7 +157,6 @@ highlightsBtns.addEventListener("click", function (e) {
       btn.querySelector(".highlights__main_mobile").innerHTML = "";
       clicked.classList.add("highlight-active");
       if (btn.querySelector(".read_me_cont").classList.contains("hidden_2")) {
-        console.log(btn.querySelector(".read_me_cont"));
         btn.querySelector(".read_me_cont").classList.remove("hidden_2");
       }
     });
@@ -172,7 +169,6 @@ highlightsBtns.addEventListener("click", function (e) {
 });
 
 projectContainer.addEventListener("click", function (e) {
-  /*  e.preventDefault(); */
   const clicked = e.target.closest(".courses__subject");
   if (!clicked) return;
   const textArea = clicked.querySelector(".project_markup");
@@ -270,13 +266,3 @@ const submitValidation = function (e) {
 
 btnSubmit.addEventListener("click", submitValidation);
 
-/* const validateType = function (inputID) {
-  const inputValue = document.getElementById(inputID).value;
-
-  if (typeof inputValue !== "string") {
-    console.log(`Input field $${inputID} is not a string`);
-    return false;
-  }
-
-  if (typeof inputValue === "string") return true;
-}; */
