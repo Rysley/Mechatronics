@@ -46,4 +46,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/mechatronics
+          server-dir: /public_html/mechatronics/
