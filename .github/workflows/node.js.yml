@@ -4,10 +4,8 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: ["master"]
-  pull_request:
-    branches: ["master"]
+  workflow-dispatch:
+
 
 jobs:
   build:
@@ -31,3 +29,21 @@ jobs:
         with:
           name: dist
           path: dist
+
+  deploy: 
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Download a single artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: dist
+      name: 🚚 Get latest code
+      uses: actions/checkout@v2
+    - name: 📂 Upload (Sync)
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      with:
+        server: ${{ secrets.HOSTNAME }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        local-dir: ./dist/
+        server-dir:	/public_html/mechatronics
