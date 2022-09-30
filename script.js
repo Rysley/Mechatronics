@@ -62,47 +62,47 @@ const coursesMarkups = {
 };
 
 const projectMarkups = {
-  about_project: `<p>During the needs analysis, which we conducted together with our partners, we examined the needs of students. We came to the joint conclusion that such a forward-looking direction which is mechatronics requires intensified work at the school level as well as providing additional development opportunities. The needs of students result from the insufficient level of education in technical schools and the lack of necessary educational tools. Our project in its innovative form will allow students with fewer opportunities to acquire skills and qualifications that are unattainable due to the lack of sufficient financial support from parents and the school. Less opportunities often result from amuch lower level of education offered by schools in smaller towns.
+  about_project: `<p>During the needs analysis, which we conducted together with our partners, we examined the needs of students. We came to the joint conclusion that such a forward-looking direction which is mechatronics requires intensified work at the school level as well as providing additional development opportunities.</p> 
+  <p>The needs of students result from the insufficient level of education in technical schools and the lack of necessary educational tools. Our project in its innovative form will allow students with fewer opportunities to acquire skills and qualifications that are unattainable due to the lack of sufficient financial support from parents and the school. Less opportunities often result from amuch lower level of education offered by schools in smaller towns.</p>
 
-  During the project, an on-line platform will be developed:
-  – containing courses,
-  – tutorials, instructions,
-  – a forum for exchanging experiences,
-  – lesson plans,
-  – teaching materials for independent work of the student.
+  <p>During the project, an on-line platform will be developed:</p>
+  <p>– containing courses,</p>
+  <p>– tutorials, instructions,</p>
+  <p>– a forum for exchanging experiences,</p>
+  <p>– lesson plans,</p>
+  <p>– teaching materials for independent work of the student.</p>
   
-  The platform will be developed during the next stages of the project (user needs analysis, implementation of demo version, tests, feedback) from users, usability and substantive research) so that our final result is the culmination of the work of experts, users and other people taking participation in the venture.</p>`,
-  directed_to: `<p>Prepared online vocational courses are primarily addressed to:
-
-  vocational school students (who are studying in mechatronics and want to apply for a place in mechatronics studies),
+  <p>The platform will be developed during the next stages of the project (user needs analysis, implementation of demo version, tests, feedback) from users, usability and substantive research) so that our final result is the culmination of the work of experts, users and other people taking participation in the venture.</p>`,
+  directed_to: `<p>Prepared online vocational courses are primarily addressed to:</p>
+  <p>vocational school students (who are studying in mechatronics and want to apply for a place in mechatronics studies),
   for students who want to make up for their educational shortcomings,
   for people who want to improve their competences in work related to mechatronics,
   for people interested in improving their qualifications getting a job in a profession where mechatronics knowledge is used</p>`,
   purpose: `<p>Develop skills in the field of mechatronics using innovative methods.
-  Develop an innovative educational tool – an online platform that will enable students to acquire new competences, knowledge and practical professional experience in the field of mechatronics,
-  Expanding contacts and exchanging experience with teachers and students from other EU countries</p>`,
-  benefits: `<p>The project assumes, among others, conducting a programming course on the basis of which platform users will master the issues of operating data reading equipment, e.g. counters that will allow them to move on to the next stages of the course, including CAN support, and then to write programs that will combine and handle the data they collect andmessages.
+  Develop an innovative educational tool – an online platform that will enable students to acquire new competences, knowledge and practical professional experience in the field of mechatronics.</p>
+  <p>Expanding contacts and exchanging experience with teachers and students from other EU countries</p>`,
+  benefits: `<p>The project assumes, among others, conducting a programming course on the basis of which platform users will master the issues of operating data reading equipment, e.g. counters that will allow them to move on to the next stages of the course, including CAN support, and then to write programs that will combine and handle the data they collect andmessages.</p>
 
-  Trainings and courses will be divided into short theoretical lessons during which issues to be learned in the form of films, descriptions and presentations will be presented. Undergoing training for users with the knowledge necessary to pass the course. The courses will be divided into lessons during which students will take courses and pass them in stages. The courses are focused on acquiring practical knowledge. During the course, everyone will have to create a prototype root or other device.</p>`,
+  <p>Trainings and courses will be divided into short theoretical lessons during which issues to be learned in the form of films, descriptions and presentations will be presented. Undergoing training for users with the knowledge necessary to pass the course. The courses will be divided into lessons during which students will take courses and pass them in stages. The courses are focused on acquiring practical knowledge. During the course, everyone will have to create a prototype root or other device.</p>`,
   about_us: `<p>
-  The Center for Education and Civic Entrepreneurship Foundation is a non-governmental organization whose priority is to support cooperation between various types of organizations and institutions in the field of international activities, educational classes, conferences and trainings. Trainings organized by the Foundations primarily support professional and personal development. All activities carried out by the Foundation are based on informal learning methods. The goals of the Foundation’s are similar with the strategic goals set by the Erasmus Plus program, i.e. increasing attractiveness, improving the quality of education and training, and increasing the number of professional and training trips. For several years, the Foundation’s activities have also focused on developing cooperation between institutions involved in education.
+  The Center for Education and Civic Entrepreneurship Foundation is a non-governmental organization whose priority is to support cooperation between various types of organizations and institutions in the field of international activities, educational classes, conferences and trainings. Trainings organized by the Foundations primarily support professional and personal development. All activities carried out by the Foundation are based on informal learning methods. The goals of the Foundation’s are similar with the strategic goals set by the Erasmus Plus program, i.e. increasing attractiveness, improving the quality of education and training, and increasing the number of professional and training trips. For several years, the Foundation’s activities have also focused on developing cooperation between institutions involved in education.</p>
   
-  The Foundation is a partner of a network of local companies and is actively involved in EU projects that support educational activities related to raising social and professional competences.
+  <p>The Foundation is a partner of a network of local companies and is actively involved in EU projects that support educational activities related to raising social and professional competences.</p>
   
-  The Center for Education and Civic Entrepreneurship Foundation actively participates in the implementation of Polish and international projects related to raising social competences and professional qualifications of various social groups: pupils, students, employees of small and medium-sized enterprises. Thanks to the extensive network of contacts with foreign partners, the Foundation is able to organize the best internships and trainings, as well as increase the professional competence of participants, as well as organize visits to companies / organizations, specialist seminars and workshops, language courses and cultural programs. The solutions prepared and offered are always tailored to the individual needs of the participants. The Foundation works closely with vocational education institutions, companies and NGOs sharing knowledge and experience in the field of conducting educational activities. Foundation also cooperates with vocational schools by organizing trainings for students and teachers, sharing good practices in education and training. The Foundation’s activities in this area significantly affect the improvement of the quality of education and international cooperation between institutions.
+  <p>The Center for Education and Civic Entrepreneurship Foundation actively participates in the implementation of Polish and international projects related to raising social competences and professional qualifications of various social groups: pupils, students, employees of small and medium-sized enterprises. Thanks to the extensive network of contacts with foreign partners, the Foundation is able to organize the best internships and trainings, as well as increase the professional competence of participants, as well as organize visits to companies / organizations, specialist seminars and workshops, language courses and cultural programs. The solutions prepared and offered are always tailored to the individual needs of the participants. The Foundation works closely with vocational education institutions, companies and NGOs sharing knowledge and experience in the field of conducting educational activities. Foundation also cooperates with vocational schools by organizing trainings for students and teachers, sharing good practices in education and training. The Foundation’s activities in this area significantly affect the improvement of the quality of education and international cooperation between institutions.</p>
   
-  The foundation is experienced in the implementation of Erasmus + projects both as a beneficiary and partner. So far, Foundation completed 20 projects financed from EU funds. The Foundation’s employees and associates have a lot of experience in organizing and conducting educational workshops and seminars promoting individual entrepreneurship, as well as training in strengthening social and professional competences. Foundation employees implementing projects under the Erasmus + program and other EU programs have gained experience in organization, coordination of activities as well as proper monitoring and evaluation. The employees of the Foundation are people experienced in education – academic teachers and trainers of vocational schools, who specialize in the fields of the labor market, education and vocational training in their current work, including research.</p>`,
-  erasmus_plus: `<p>Our project is implemented under the Erasmus + Vocational Education and Training program.
+  <p>The foundation is experienced in the implementation of Erasmus + projects both as a beneficiary and partner. So far, Foundation completed 20 projects financed from EU funds. The Foundation’s employees and associates have a lot of experience in organizing and conducting educational workshops and seminars promoting individual entrepreneurship, as well as training in strengthening social and professional competences. Foundation employees implementing projects under the Erasmus + program and other EU programs have gained experience in organization, coordination of activities as well as proper monitoring and evaluation. The employees of the Foundation are people experienced in education – academic teachers and trainers of vocational schools, who specialize in the fields of the labor market, education and vocational training in their current work, including research.</p>`,
+  erasmus_plus: `<p>Our project is implemented under the Erasmus + Vocational Education and Training program.</p>
 
-  The aim of the Programme is to improve the quality of vocational and continuing education.
+  <p>The aim of the Programme is to improve the quality of vocational and continuing education.</p>
   
-  Our project is implemented under the Erasmus + Vocational Education and Training program.
+  <p>Our project is implemented under the Erasmus + Vocational Education and Training program.</p>
   
-  The program aims to improve the quality of vocational and continuing education.
+  <p>The program aims to improve the quality of vocational and continuing education.</p>
   
-  In the project implemebted under the Erasmus + Programme can take part students, graduates as well as teachers of practical vocational training, management staff of educational institutions, trainers, coaches and employees on the European labour market.
+  <p>In the project implemebted under the Erasmus + Programme can take part students, graduates as well as teachers of practical vocational training, management staff of educational institutions, trainers, coaches and employees on the European labour market.</p>
   
-  The project will help to implement innovative educational solutions, supports solutions that increase transparency and recognition of professional qualifications.</p>
+  <p>The project will help to implement innovative educational solutions, supports solutions that increase transparency and recognition of professional qualifications.</p>
   
   <a target="_blank" rel="noopener noreferrer" href="https://erasmusplus.org.pl/sektory?sector=2" style="padding-left: 1rem">erasmusplus.org.pl</a>
   
