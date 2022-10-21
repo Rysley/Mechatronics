@@ -655,6 +655,7 @@ li .highlights__text_element {
 
 .courses__subject_text {
   height: auto;
+  text-align: justify;
   min-height: 200px;
   padding-bottom: 12px;
   border-radius: 9px 9px;

@@ -14,8 +14,31 @@
     <title>Mechatronics Courses</title>
     <link rel="shortcut icon" href="./resources/media/images/mecha_arm_16.ico" type="image/x-icon">
     <link rel="icon" href="./resources/media/images/mecha_arm_16.ico" type="image/x-icon">
-    <script type="module" src="script.js"></script>
+    <script type="module" src="resources/js/script.js"></script>
   </head>
+
+   <!-- HEADER -->
+  <header id='header'>
+    <div class='header__icons landscape'>
+      <a target="_blank" rel="noopener noreferrer" href="https://erasmus-plus.ec.europa.eu/projects/search/search?page=1&sort=&domain=eplus2021&view=&keyword=mechatronics&searchType=projects">
+      <img class="erasmus_header" src="./resources/media/images/erasmus.png">
+      </a>
+    </div>
+    <div class='header__nav landscape'>
+      <nav>
+        <ul class='header__list'>
+          <li class='landscape'><a href='#project'>PROJECT</a></li>
+          <li class='landscape'><a href='#courses'>COURSES</a></li>
+          <li class='landscape'><a href='#partners'>PARTNERS</a></li>
+          <li class='landscape btn--show-modal'><a href='#contact'>CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <a class='mobile__none' href='#project'><li class='mobile'><img title="PROJECT" src="./resources/media/images/ic-project.ico"/></li></a>
+    <a class='mobile__none' href ='#courses'><li class='mobile'><img title="COURSES" src="./resources/media/images/mecha_arm_32.ico"/></li></a>
+    <a class='mobile__none' href='#partners'><li class='mobile'><img title="PARTNERS" src="./resources/media/images/ic-partners.ico"/></li></a>
+    <a class='mobile__none btn--show-modal' href='#contact'><li class='mobile'><img title="CONTACT US" src="./resources/media/images/ic-contact.ico"/></li></a>
+  </header>
 
   <body>
     <!-- BANNER SECTION-->
@@ -31,28 +54,7 @@
         <a class='banner__button button' target="_blank" rel="noopener noreferrer" href='http://quality-education.eu/courses/'><span>Sign Up</span></a>
       </div>
     </div>
-        <!-- HEADER -->
-    <header id='header'>
-      <div class='header__icons landscape'>
-        <a target="_blank" rel="noopener noreferrer" href="https://erasmus-plus.ec.europa.eu/projects/search/search?page=1&sort=&domain=eplus2021&view=&keyword=mechatronics&searchType=projects">
-        <img class="erasmus_header" src="./resources/media/images/erasmus.png">
-        </a>
-      </div>
-      <div class='header__nav landscape'>
-        <nav>
-          <ul class='header__list'>
-            <li class='landscape'><a href='#project'>PROJECT</a></li>
-            <li class='landscape'><a href='#courses'>COURSES</a></li>
-            <li class='landscape'><a href='#partners'>PARTNERS</a></li>
-            <li class='landscape btn--show-modal'><a href='#contact'>CONTACT</a></li>
-          </ul>
-        </nav>
-      </div>
-        <a class='mobile__none' href='#project'><li class='mobile'><img title="PROJECT" src="./resources/media/images/ic-project.ico"/></li></a>
-        <a class='mobile__none' href ='#courses'><li class='mobile'><img title="COURSES" src="./resources/media/images/mecha_arm_32.ico"/></li></a>
-        <a class='mobile__none' href='#partners'><li class='mobile'><img title="PARTNERS" src="./resources/media/images/ic-partners.ico"/></li></a>
-        <a class='mobile__none btn--show-modal' href='#contact'><li class='mobile'><img title="CONTACT US" src="./resources/media/images/ic-contact.ico"/></li></a>
-  </header>
+       
 
     <!--- PROJECT GUIDE -->
   <container class="container_frame">
@@ -353,6 +355,7 @@
         <input type="text" class="input" name="first_name" id="input_fname"/>
         <label>Last Name</label>
         <input type="text" class="input" name="last_name" id="input_lname"/>
+        <input type="text" name="_honey" style="display:none">
         <label>Email Address</label>
         <input type="email" class="input" name="email" id="input_email"/>
         <label>Phone Number</label>
